@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Simple Pokémon-Style Battle</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="game-container">
+    <header>
+      <h1>Simple Pokémon Battle</h1>
+    </header>
+
+    <main class="battle-area">
+      <!-- Enemy area -->
+      <section class="pokemon enemy">
+        <div class="pokemon-info">
+          <div class="name" id="enemy-name">Enemy</div>
+          <div class="hp-text" id="enemy-hp-text">HP: 0 / 0</div>
+          <div class="hp-bar-bg">
+            <div class="hp-bar" id="enemy-hp-bar"></div>
+          </div>
+        </div>
+        <div class="pokemon-image">
+          <img id="enemy-img" src="https://via.placeholder.com/140x110?text=Wild" alt="Enemy Pokémon" />
+        </div>
+      </section>
+
+      <!-- Player area -->
+      <section class="pokemon player">
+        <div class="pokemon-image">
+          <img id="player-img" src="https://via.placeholder.com/140x110?text=Player" alt="Player Pokémon" />
+        </div>
+        <div class="pokemon-info">
+          <div class="name" id="player-name">Player</div>
+          <div class="hp-text" id="player-hp-text">HP: 0 / 0</div>
+          <div class="hp-bar-bg">
+            <div class="hp-bar" id="player-hp-bar"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Actions -->
+    <aside class="controls">
+      <div class="actions">
+        <button id="attack-btn" class="action-btn">Attack</button>
+        <button id="item-btn" class="action-btn">Use Item</button>
+        <button id="catch-btn" class="action-btn">Catch</button>
+        <button id="switch-btn" class="action-btn">Switch Pokémon</button>
+      </div>
+
+      <!-- Move choices appear here when Attack is pressed -->
+      <div id="moves-panel" class="moves-panel hidden"></div>
+
+      <!-- Items panel -->
+      <div id="items-panel" class="items-panel hidden">
+        <button class="item" data-item="potion">Potion (+20 HP)</button>
+        <button id="close-items" class="item">Close</button>
+      </div>
+    </aside>
+
+    <!-- Message log -->
+    <section class="log">
+      <h2>Message Log</h2>
+      <div id="message-log" class="message-log"></div>
+      <div class="log-controls">
+        <button id="clear-log">Clear</button>
+      </div>
+    </section>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
